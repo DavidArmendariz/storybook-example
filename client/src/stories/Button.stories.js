@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Button } from './Button';
 
-export default {
+const story = {
   title: 'Example/Button',
   component: Button,
   argTypes: {
@@ -10,12 +10,14 @@ export default {
   },
 };
 
-const Template = (args) => <Button {...args} />;
+export default story;
+
+const Template = args => <Button {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
   primary: true,
-  label: 'Button',
+  label: 'Click me!',
 };
 
 export const Secondary = Template.bind({});
